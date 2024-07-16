@@ -115,17 +115,42 @@ header {
     color: #6f6f6f;
 }
 
-.star {
-    width: 476px;
-    height: 165px;
-    background-image: url(./stars\ title.svg);
+#s1 {
+    width: 50px;
+    height: 50px;
+    background-image: url(./starssolo.svg);
     background-size: contain;
     background-repeat: no-repeat;
     position: absolute;
-    left: 110px;
-    top: 208px;
+    left: 550px;
+    top: 210px;
     animation: blink-1 4.5s ease-in-out infinite both;
 }
+
+#s2 {
+    width: 22px;
+    height: 50px;
+    background-image: url(./starssolo.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 530px;
+    top: 252px;
+    animation: blink-1 4.2s ease-in-out infinite both;
+}
+
+#s3 {
+    width: 30px;
+    height: 50px;
+    background-image: url(./starssolo.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 111px;
+    top: 309px;
+    animation: blink-1 4.2s ease-in-out infinite both;
+}
+
 @keyframes blink-1 {
     0%,
     50%,
@@ -183,7 +208,7 @@ header {
 }
 
 .about {
-    overflow: hidden;
+    overflow-x: hidden;
     width: 100vw;
     height: 70vh;
     border: solid 1.5px black;
@@ -191,6 +216,7 @@ header {
     align-items: center;
     justify-content: center;
     position: relative;
+    background-color: rgba(229, 226, 218, 0.51);
 }
 
 .introduce {
@@ -208,18 +234,73 @@ header {
     background-image: url(./photoid.png);
     background-size: cover;
     border: solid 2px black;
+    position: relative;
+    filter: sepia(10%);
+}
+
+#x {
+    width: 180px;
+    height: 1.2px;
+    background-color: black;
+    transform: rotate(90deg);
+    position: absolute;
+    left: 460px;
+    bottom: 355px;
+}
+
+#y {
+    width: 130px;
+    height: 1px;
+    background-color: black;
+    position: absolute;
+    left: 435px;
+    bottom: 430px;
+}
+#star1 {
+    width: 18px;
+    height: 50px;
+    background-image: url(./starssolo.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 305px;
+    bottom: 77px;
+    animation: blink-1 4s ease-in-out infinite both;
+}
+
+#star2 {
+    width: 35px;
+    height: 50px;
+    background-image: url(./starssolo.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 310px;
+    bottom: 110px;
+    animation: blink-1 4.5s ease-in-out infinite both;
 }
 
 .text-intro {
     width: 500px;
-    height: 130px;
+    height: 80px;
+    padding-top: 8px;
+    line-height: 25px;
     font-family: "Gothic A1", sans-serif;
+    font-size: large;
+    letter-spacing: 1px;
 }
 
 #hey {
     font-family: 'ELEPHANT', sans-serif;
     font-size: 50px;
     position: absolute;
-    top: 100px;
+    top: 124px;
+    right: 551px;
+}
+
+#name {
+    position: absolute;
+    top: 180px;
+
 }
 
