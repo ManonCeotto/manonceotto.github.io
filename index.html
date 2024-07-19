@@ -11,64 +11,165 @@
         @import url('https://fonts.cdnfonts.com/css/elephant-2');
         @import url('https://fonts.cdnfonts.com/css/varuna');
         @import url('https://fonts.googleapis.com/css2?family=Croissant+One&display=swap');
-
+        @import url('https://fonts.googleapis.com/css2?family=Gothic+A1:wght@200&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
     </style>
 </head>
 <body>
+    <div class="container">
     <!--bloc hero-->
     <header>
         <div class="nav">
             <div class="logo"></div>
             <div class="menu">
-                <p id="h">Home</p>
-                <p id="a">A propos</p>
-                <p id="p">Projets</p>
+                <a class="btn" href="">Home</a>
+                <p>A propos</p>                
+                <p>Projets</p>
+                <p>Contact</p>
             </div>
         </div>
-        <div class="line" id="top"></div>
         <div class="hero">
+            <div class="star"></div>
             <div class="text-overlay">
+
                 <!--sparkle-->
-                <div class="star" id="s1"></div>
-                <div class="star" id="s2"></div>
-                <div class="star" id="s3"></div>
+                <div id="star-thin"></div>
+                <div id="star-corner"></div>
+                <div id="star-bottom"></div>
 
                 <!--text hero-->
-                <p id="jap">私はマノンです。初めまして!</p>
-                <p>Front-end</p>
+                <div id="front"><p>front-end</p></div>
+                <div class="mini-text">
                 <p>developer</p>
-                <p id="ui">&UI designer</p>
+                <p>&UI designer</p>
+                </div>
             </div>
+
             <!--details lines-->
-            <div class="line" id="bottom-x"></div>
-            <div class="line" id="bottom-y"></div>
-            <div class="oursins"></div>
-            <div class="txt-portfolio">
+            <div class="line-left"></div>
+            <div class="line-right"></div>
+
+            <!--text bottom hero-->
+            <div class="txt-hero-bottom-right">
                 <p id="year">2024</p>
-                <p>PORTFOLIO</p>
+                <p>Portfolio</p>
+                <div id="mini-stars"></div>
+            </div>
+            <div class="txt-hero-bottom-left">
+                <p>Manon</p>
+                <p>Ceotto</p>
             </div>
         </div>
     </header>
+
 <!-- bloc a propos-->
- <div class="about">
+ <div class="about" id="about">
     <div class="introduce">
-        <div class="img"></div>
-        <div class="img-line" id="x"></div>
-        <div class="img-line" id="y"></div>
-        <div id="star1"></div>
-        <div id="star2"></div>
-
-
+        <div class="img">
+            <div class="star-deco"></div>
+        </div>
+        
 
         <!--bloc paragraphe-->
         <div class="text-intro">
             <p id="hey">Hey there !</p>
             <p id="name">Je m’appelle Manon,</p>
-            <p> Je suis developpeuse front-end & UI designeuse basée sur Paris. De formation CDA, je suis également passionnée d’UI et de graphisme.
-                En tirant parti de mes aptitudes, je vise à la fois l’esthétique et la fonctionnalité afin de concevoir une expérience utilisateur intuitive.
-            </p>
+            <p> Je suis developpeuse front-end & UI designeuse basée sur Paris. De formation CDA, je suis également passionnée d’UI et de graphisme.</p><br>
+            <p>Je sais pas quoi écrire donc j'écris ça et ça. Ca aussi pourquoi pas.</p>
+                <a class="btn" href="">Voir mon cv</a>
+              </div>
         </div>
     </div>
  </div>
+
+
+<!-- bloc skills -->
+<div class="bloc-skills">
+<div class="child-compétences">
+    <div id="parent-titre">
+        <div class="child-star"></div>
+        <div class="text-skills">Compétences</div>
+    </div>
+    <div class="svg-skills"></div>
+
+    <div id="parent-titre" id="hobbies">
+        <div class="child-star"></div>
+        <div class="text-skills">Hobbies</div>
+    </div>
+    <div class="parent-hobbies">
+        <div class="japan" id="Column">
+            <div id="svg"></div>
+            <p>Japon</p>
+            <p>et sa culture</p>
+        </div>
+        <div class="games"id="Column">
+            <div id="svg"></div>
+            <p>Jeux Videos</p>
+        </div>
+        <div class="design" id="Column">
+            <div id="svg"></div>
+            <p>Design</p>
+            <p>graphique</p>
+        </div>
+        <div class="video" id="Column">
+            <div id="svg"></div>
+            <p>Montage</p>
+        </div>
+
+
+    </div>
+</div>
+
+
+
+
+<div class="child-contact">
+    <div id="parent-titre">
+        <div class="child-star"></div>
+        <div class="text-contact">Contact</div>
+    </div>
+    <div class="svg-social"></div>
+
+</div>
+
+
+</div>
+ <!--bloc projets-->
+ <div class="bloc-projects">
+    <p>Projets</p>
+    <div class="projets">
+        <div id="pro-1"></div>
+        <div id="pro-2"></div>
+        <div id="pro-3"></div>
+    </div>
+ </div>
+
+ <footer>
+<p id="thk">Merci !</p><br>
+<p id="lets-work">Travaillons ensemble !</p>
+<div class="star-bottom"></div>
+
+<!--bloc link reseau-->
+<div class="bloc-reseau">
+
+    <div class="git">
+    <div id="logo"></div>
+    <p>manon.git.io</p>
+    </div>
+
+    <div class="bh">
+        <div id="logo"></div>
+        <p>behance.net/manon</p>
+        </div>
+
+        <div class="in">
+            <div id="logo"></div>
+            <p>linkedin.com/in/manon</p>
+            </div>
+
+</div>
+ </footer>
+
+</div>
 </body>
 </html>

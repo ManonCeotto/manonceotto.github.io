@@ -1,0 +1,20 @@
+* {
+    margin: 0;
+}
+.taille {
+    width: 200px;
+    height: 200px;
+    background-color: indigo;
+
+}
+#blue {
+    background-color: blue
+}
+.nom {
+    color: white;
+    font-size: 30px;
+}
+#prenom {
+    font-weight: bold;
+    font-style: italic;
+}

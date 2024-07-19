@@ -1,0 +1,112 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container {
+    background-color: rgb(8, 8, 26);
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.main {
+    background-color: rgb(21, 21, 63);
+    width: 300px;
+    height: 75%;
+    border-radius: 20px;
+    display: flex;  
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    box-shadow: 0px 11px 39px rgb(9, 9, 9);    
+}
+.photo {
+    width: 100%;
+    height: 49%;
+    border-radius: 7px;
+    background-image: url(./images/image-equilibrium.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.titre {
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    padding-right: 41%;
+    font-family: "Montserrat", sans-serif;
+    opacity: 90%;
+    padding-top: 40px;
+    
+}
+.titre:hover {
+    color: aqua;
+}
+.text {
+    color: white;
+    font-family: "Montserrat", sans-serif;
+    font-size: 15px;
+    opacity: 60%;
+    padding-top: 15px;
+}
+.icons {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    color: aqua;
+    font-family: "Montserrat", sans-serif;
+    padding-top: 60px;
+}
+.left {
+    display: flex;
+    justify-content: flex-start;
+    gap: 5px;
+}
+.right {
+    display: flex;
+    justify-content: flex-start;
+    gap: 5px;
+    color: white;
+    opacity: 60%;
+}
+.line {
+    border-top: 1px solid white;
+    opacity: 60%;
+    width: 260px;
+    margin-top: 20px;
+}
+.profil {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    padding-right: 21px;
+    padding-top: 23px
+}  
+p {
+    color: rgb(173, 173, 173);
+    font-family: "Montserrat", sans-serif;
+    font-size: 15px;
+
+}
+.num {
+    color: aqua;
+}
+.avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    border: solid 1px rgb(117, 117, 117);
+    background-image: url(./images/image-avatar.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+span {
+    font-weight: bold;
+    opacity: 100%;
+}
+span:hover{
+    color: aqua;
+}

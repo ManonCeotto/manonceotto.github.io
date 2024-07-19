@@ -3,42 +3,36 @@
     padding: 0;
     box-sizing: border-box;
 }
+html{
+    scroll-behavior: smooth;
+}
+
+body {
+    overflow-x: hidden;
+    scrollbar-width: thin;
+}
+
+.container {
+    max-width: 1500px;
+    margin: 0 auto;
+}
 
 header {
-    width: 100vw;
+    width: 100dvw;
     height: 100vh;
-    background-image: url(./Imgback.png);
+    background-image: url(./back-img.png);
     border: solid 1.5px black;
     position: relative;
-    }
+}
 
 .nav {
     width: 100%;
     height: 50px;
     display: flex;
     align-items: center;
-    justify-content: flex-end;
-    gap: 30px;
-    padding: 10px;
-    border-bottom: 1px solid black;
-}
-
-#top{
-    width: 400px;
-    height: 1px;
-    background-color: black;
-    transform: rotate(90deg);
-    margin-left: -147px;
-}
-
-.logo {
-    width: 100px;
-    height: 100px;
-    padding-left: 500px;
-    background-image: url(./Logo\ 4all_.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-    opacity: 70%;
+    justify-content: center;
+    gap: 50px;
+    padding: 30px;
 }
 
 .menu {
@@ -46,23 +40,24 @@ header {
     align-items: center;
     justify-content: center;
     gap: 30px;
-    padding-right: 30px;    
-    font-family: "Gothic A1", sans-serif;
+    padding-right: 40px;    
     font-size: 15px;
+    font-family: "Montserrat", sans-serif;    
+    color: rgb(32, 32, 32);
+
 }
 
-.menu p{
+.menu a{
     position: relative;
-    color: #000;
     text-decoration: none;
 }
 
-.menu p:hover {
-    color: #000;
+.menu a:hover {
+    color: #1b1b1b;
     cursor: pointer;
   }
   
-.menu p::before {
+.menu a::before {
     content: "";
     position: absolute;
     display: block;
@@ -75,7 +70,7 @@ header {
     transition: transform 0.3s ease;
   }
   
-.menu p:hover::before {
+.menu a:hover::before {
     transform: scaleX(1);
   }
 
@@ -87,68 +82,107 @@ header {
     align-items: center;
 }
 
+.line-left {
+    position: absolute;
+    left: -265px;
+    width: 630px;
+    height: 1px;
+    background-color: black;
+    transform: rotate(90deg);
+}
+
+.line-right {
+    position: absolute;
+    right: -265px;
+    width: 630px;
+    height: 1px;
+    background-color: black;
+    transform: rotate(90deg);
+}
+
+/* Bloc titre */
 .text-overlay {
     width: 100%;
-    font-size: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -60px;
     font-family: "Croissant One", serif;
-    font-weight: 400;
     color: rgb(52 51 51);
+}
+/* Titre */
+#front {
+    font-size: 70px;
+    padding-bottom: 15px;
+}
+/* soustitre "front-end"  */
+.mini-text {
+    position: absolute;
+    bottom: 325px;
+    right: 545px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: baseline;
-    margin-bottom: 225px;
-    padding: 150px;
-    line-height: 62px;
+    align-items: end;
+    font-family: 'ELEPHANT', sans-serif;
+    line-height: 20px;
+    font-size: 20px;
+
 }
 
-#ui {
-  font-family: 'ELEPHANT', sans-serif;
-  font-size: 65px;
-}
-
-#jap {
-    font-size: 18px;
+.star {
     position: absolute;
-    top: 140px;
-    left: 155px;
-    color: #6f6f6f;
+    top: 225px;
+    width: 500px;
+    height: 260px;
+    background-image: url(./ellipse.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
-#s1 {
-    width: 50px;
+#mini-stars {
+    position: absolute;
+    right: 63px;
+    width: 65px;
+    height: 15px;
+    background-image: url(./mini-stars-bottom.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+#star-thin {
+    width: 25px;
     height: 50px;
     background-image: url(./starssolo.svg);
     background-size: contain;
     background-repeat: no-repeat;
     position: absolute;
-    left: 550px;
-    top: 210px;
+    left: 840px;
+    top: 261px;
+    animation: blink-1 4.2s ease-in-out infinite both;
+}
+
+#star-corner {
+    width: 15px;
+    height: 38px;
+    background-image: url(./smoothcorner.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 855px;
+    top: 250px;
     animation: blink-1 4.5s ease-in-out infinite both;
 }
 
-#s2 {
-    width: 22px;
-    height: 50px;
+#star-bottom {
+    width: 15px;
+    height: 38px;
     background-image: url(./starssolo.svg);
     background-size: contain;
     background-repeat: no-repeat;
     position: absolute;
-    left: 530px;
-    top: 252px;
-    animation: blink-1 4.2s ease-in-out infinite both;
-}
-
-#s3 {
-    width: 30px;
-    height: 50px;
-    background-image: url(./starssolo.svg);
-    background-size: contain;
-    background-repeat: no-repeat;
-    position: absolute;
-    left: 111px;
-    top: 309px;
-    animation: blink-1 4.2s ease-in-out infinite both;
+    left: 600px;
+    bottom: 287px;
+    animation: blink-1 4.4s ease-in-out infinite both;
 }
 
 @keyframes blink-1 {
@@ -162,62 +196,46 @@ header {
       opacity: 0;
     }
   }
-
-#bottom-x {
-    width: 400px;
-    height: 1px;
-    background-color: black;
-    transform: rotate(90deg);
-    position: absolute;
-    right: -150px;
-    bottom: 230px;
-}
-
-#bottom-y {
-    width: 290px;
-    height: 1px;
-    background-color: black;
-    position: absolute;
-    right: 30px;
-    bottom: 50px;
-}
-
-.oursins {
-    width: 65px;
-    height: 100px;
-    background-image: url(./oursins.svg);
-    background-size: contain;
-    background-repeat: no-repeat;
-    margin-top: -270px
-}
-
-.txt-portfolio {
+/* text "portfolio" */
+.txt-hero-bottom-right {
     width: 220px;
     display: flex;
-    justify-content: space-between;
+    justify-content:end;
     align-items: center;
+    gap: 60px;
     padding: -10px;
     position: absolute;
-    bottom: 50px;
+    bottom: 40px;
     right: 70px;
-    font-family: "Gothic A1", sans-serif;
-}
-
-#year {
     font-family: "Croissant One", serif;
+    color: rgb(52 51 51);
 }
 
+/* text nom */
+.txt-hero-bottom-left {
+    width: 220px;
+    display: flex;
+    justify-content:baseline;
+    align-items: center;
+    gap: 10px;
+    padding: -10px;
+    position: absolute;
+    bottom: 40px;
+    left: 70px;
+    font-family: "Croissant One", serif;
+    color: rgb(52 51 51);
+}
+
+/* Bloc A propos */
 .about {
+    position: relative;
     overflow-x: hidden;
     width: 100vw;
     height: 70vh;
-    border: solid 1.5px black;
     display: flex;
     align-items: center;
     justify-content: center;
-    position: relative;
-    background-color: rgba(229, 226, 218, 0.51);
-}
+    background-color: rgb(241 240 237);}
 
 .introduce {
     width: 100%;
@@ -229,78 +247,423 @@ header {
 }
 
 .img {
-    width: 202px;
+    width: 230px;
     height: 300px;
-    background-image: url(./photoid.png);
+    background-image: url(./img-cartoon.jpg);
     background-size: cover;
+    background-position: center;
     border: solid 2px black;
     position: relative;
-    filter: sepia(10%);
+    filter: saturate(10%);
 }
 
-#x {
-    width: 180px;
-    height: 1.2px;
-    background-color: black;
-    transform: rotate(90deg);
+.star-deco {
     position: absolute;
-    left: 460px;
-    bottom: 355px;
-}
-
-#y {
-    width: 130px;
-    height: 1px;
-    background-color: black;
-    position: absolute;
-    left: 435px;
-    bottom: 430px;
-}
-#star1 {
-    width: 18px;
-    height: 50px;
-    background-image: url(./starssolo.svg);
+    top: -55px;
+    right: -128px;
+    background-image: url(./details-img-id.svg);
     background-size: contain;
     background-repeat: no-repeat;
-    position: absolute;
-    left: 305px;
-    bottom: 77px;
-    animation: blink-1 4s ease-in-out infinite both;
-}
-
-#star2 {
-    width: 35px;
-    height: 50px;
-    background-image: url(./starssolo.svg);
-    background-size: contain;
-    background-repeat: no-repeat;
-    position: absolute;
-    left: 310px;
-    bottom: 110px;
-    animation: blink-1 4.5s ease-in-out infinite both;
+    width: 200px;
+    height: 200px;
 }
 
 .text-intro {
     width: 500px;
-    height: 80px;
-    padding-top: 8px;
-    line-height: 25px;
-    font-family: "Gothic A1", sans-serif;
-    font-size: large;
-    letter-spacing: 1px;
+    height: 150px;
+    line-height: 20px;
+    font-family: "Montserrat", sans-serif;
+    padding-top: 25px;    
 }
 
 #hey {
     font-family: 'ELEPHANT', sans-serif;
-    font-size: 50px;
+    font-size: 45px;
     position: absolute;
-    top: 124px;
-    right: 551px;
+    top: 130px;
+    right: 577px;
+    color: rgb(52 51 51);
 }
 
 #name {
     position: absolute;
-    top: 180px;
-
+    top: 185px;
+    font-family: "Montserrat", sans-serif;    
+    font-weight: 500;
 }
 
+.btn {
+    position: relative;
+    color: #000;
+    font-family: "Montserrat", sans-serif;    
+    font-size: 13px;
+    text-transform: uppercase;
+    text-decoration: none;
+    position: absolute;
+    bottom: 150px;
+    &:hover {
+      &:before {
+        opacity: 1;
+        animation: coverUp 0.3s ease forwards;
+      }
+      &:after {
+        opacity: 0;
+      }
+    }
+    &:before, &:after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      left: 0;
+      background: #000;
+      pointer-events: none;
+    }
+    &:before {
+      height: 100%;
+      top: 0;
+      opacity: 0;
+    }
+    &:after {
+      top: 100%;
+      height: 1px;
+      transition: opacity 0.3s;
+    }
+  }
+  @keyframes coverUp {
+    0% {
+      transform-origin: 50% 100%;
+      transform: scale3d(1, 0.045, 1);
+    }
+    50% {
+      transform-origin: 50% 100%;
+      transform: scale3d(1, 1, 1);
+    }
+    51% {
+      transform-origin: 50% 0%;
+      transform: scale3d(1, 1, 1);
+    }
+    100% {
+      transform-origin: 50% 0%;
+      transform: scale3d(1, 0.045, 1);
+    }
+  }
+
+/* Bloc skills */
+.bloc-skills {
+    width: 100vw;
+    height: 70vh;
+    background-color: rgb(241 240 237);    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 150px;
+    margin-top: -40px;
+}
+
+.child-compétences {
+    width: 30%;
+    height: 80%;
+    background-color: rgb(241 240 237);    
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+#parent-titre {
+    width: 100%;
+    height: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 15px;
+}
+
+.child-star {
+    background-image: url(./starssolo.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 30px;
+    height: 30px;
+}
+
+.text-skills {
+    color: rgb(52 51 51);
+    font-family: 'ELEPHANT', sans-serif;
+    font-size: 25px;    
+}
+
+.svg-skills {
+    width: 90%;
+    height: 30%;
+    background-image: url(./Icons-hobby/bulles\ software.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.parent-hobbies {
+    background-color: rgb(241 240 237);
+    width: 100%;
+    height: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly center;
+}
+
+.japan {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+    font-family: "Montserrat", sans-serif;    
+}
+
+.japan #svg{
+    background-image: url(./Icons-hobby/icon\ japan.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 50px;
+    height: 50px;
+}
+
+.games {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+    font-family: "Montserrat", sans-serif;    
+}
+
+.games #svg{
+    background-image: url(./Icons-hobby/icon-video-game.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 50px;
+    height: 50px;
+}
+
+.design {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+    font-family: "Montserrat", sans-serif;    
+}
+
+.design #svg{
+    background-image: url(./Icons-hobby/icon-design.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 50px;
+    height: 50px;
+}
+
+.video {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+    font-family: "Montserrat", sans-serif;    
+}
+
+.video #svg{
+    background-image: url(./Icons-hobby/icon-design.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 50px;
+    height: 50px;
+}
+
+
+.child-contact {
+    width: 20%;
+    height: 80%;
+    flex-direction: column;
+    background-color: rgb(241 240 237);
+    display: flex;
+    gap: 17px;
+}
+
+.text-contact {
+    color: rgb(52 51 51);
+    font-family: 'ELEPHANT', sans-serif;
+    font-size: 25px;    
+}
+
+.svg-social {
+    width: 95%;
+    height: 35%;
+    background-image: url(./Icons-hobby/icons-social.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+
+
+
+
+
+.bloc-projects {
+    position: relative;
+    width: 100dvw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url(./back-img.png);
+    background-size: cover;
+    opacity: 90%;
+}
+
+.bloc-projects p {
+    position: absolute;
+    top: 105px;
+    left: 70px;
+    font-family: "Croissant One", serif;
+    font-size: 20px;
+}
+
+.projets {
+    width: 90%;
+    height: 30%;
+    border-top: solid 1.5px black;
+    border-bottom: solid 1.5px black;
+    margin-bottom: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+#pro-1 {
+    width: 30%;
+    height: 85%;
+    border: solid 2px black;
+    background-image: url(./big.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    filter: saturate(5%);
+    transition: transform .3s;
+}
+ 
+#pro-1:hover {
+    filter: brightness(100%);
+    transform: scale(1.1);
+}
+
+#pro-2:hover {
+    filter: brightness(100%);
+    transform: scale(1.1);
+}
+
+#pro-3:hover {
+    filter: brightness(105%);
+    transform: scale(1.1);
+}
+
+
+#pro-2 {
+    width: 30%;
+    height: 85%;
+    border: solid 2px black;
+    background-image: url(./yamari.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    filter: saturate(5%);
+    transition: transform .3s;
+}
+
+#pro-3 {
+    width: 30%;
+    height: 85%;
+    border: solid 2px black;
+    background-image: url(./konda.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    filter: saturate(5%);
+    transition: transform .3s;
+}
+
+footer {
+    width: 100dvw;
+    height: 50vh;
+    background-image: url(./back-img.png);
+    background-size: cover;
+    filter: saturate(100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#thk {
+    font-size: 55px;
+    font-family: "Croissant One", serif;
+    color: rgb(51, 51, 51);
+}
+
+#lets-work {
+    position: relative;
+    font-size: 20px;
+    font-family: "Montserrat", sans-serif;    
+    color: rgb(51, 51, 51);
+}
+
+.star-bottom {
+    position: absolute;
+    top: 60px;
+    width: 25%;
+    height: 50%;
+    background-image: url(./stars-footer.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.bloc-reseau {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    align-items: center;
+    justify-content:space-around;
+}
+
+.git {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: "Montserrat", sans-serif;    
+}
+
+.git #logo {
+    width: 25px;
+    height: 25px;
+    background-image: url(./logo-git.svg);
+    background-size: contain;
+}
+
+.bh {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: "Montserrat", sans-serif;    
+}
+
+.bh #logo {
+    width: 25px;
+    height: 25px;
+    background-image: url(./logo-bh.svg);
+    background-size: contain;
+}
+
+.in {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: "Montserrat", sans-serif;    
+}
+
+.in #logo {
+    width: 25px;
+    height: 25px;
+    background-image: url(./logo-in.svg);
+    background-size: contain;
+}

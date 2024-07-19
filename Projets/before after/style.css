@@ -1,0 +1,30 @@
+p{
+    width: 50px;
+    width: fit-content;
+    position: relative;
+}
+p::before {
+    content: '';
+    width: 20px;
+    height: 20px;
+    background-color: rgb(255, 101, 101);
+    position: absolute;
+    top: -10px;
+    right: -25px;
+    border-radius: 50px 50px 50px 0px;
+}
+p::after {
+    content: '';
+    width: 40px;
+    height: 2px;
+    background-color: rgb(43, 38, 38);
+    position: absolute;
+    bottom: -10px;
+    left: 0px;
+    transition: 2s;
+}
+p:hover::after {
+    content: '';
+    width: 20%;
+    transition: 2s;
+}

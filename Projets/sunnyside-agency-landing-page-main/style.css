@@ -1,0 +1,313 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+header {
+    width: 1422px;
+    height: 100vh;
+    background-image: url(./images/desktop/image-header.jpg);
+    background-size: cover;
+}
+.hero {
+    width: 100%;
+    height: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav {
+    width: 100%;
+    height: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #38c1ff;
+    padding-inline: 30px;
+}
+
+.logo {
+    padding: 50px;
+    width: 100px;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    padding: 10px;
+}
+
+.menu p {
+    font-size: 18px;
+    font-family: "Barlow", sans-serif;
+    padding: 10px;
+    color: white;
+    transition: 1s;
+}
+
+.menu p:hover {
+background-color: white;
+color: black;
+border-radius: 70px;
+transition: ease-in-out 1s;
+}
+
+.text-overlay {
+    font-family: "Fraunces", serif;    
+    font-size: 60px;
+    font-weight: bold;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    letter-spacing: 5px;
+    gap: 15px;
+    margin-bottom: 220px;
+}
+
+/* bloc 1  */
+
+.bloc1 {
+    width: 1422px;
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.left {
+    justify-content: center;
+    width: 50%;
+    font-family: "Outfit", sans-serif;
+    font-size: 20px;
+    display: flex;
+    gap: 10px;
+}
+
+#test-bold {
+    font-weight: bold;
+    font-size: 40px;
+}
+
+.right {
+    width: 50%;
+    height: 100%;
+    background-image: url(./images/desktop/image-transform.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.text-left {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+}
+
+/* bloc 2 */
+
+.bloc2 {
+    width: 1422px;
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.left2 {
+    width: 50%;
+    height: 100%;
+    background-image: url(./images/desktop/image-stand-out.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
+
+.right2 {
+    justify-content: center;
+    width: 50%;
+    font-family: "Outfit", sans-serif;
+    font-size: 20px;
+    display: flex;
+    gap: 10px;
+}
+
+.text-right {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+}
+
+/* bloc3 images */
+
+.bloc3 {
+    width: 1422px;
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-family: "Outfit", sans-serif;
+    font-weight: bold;
+
+}
+
+.left3 {
+    width: 50%;
+    height: 100%;
+    background-image: url(./images/desktop/image-graphic-design.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+}
+
+.right3 {
+    width: 50%;
+    height: 100%;
+    background-image: url(./images/desktop/image-photography.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+}
+
+.text-center {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 250px;
+    font-family: "Fraunces", serif;
+    color: rgb(54, 67, 82);    
+}
+
+/* bloc client */
+
+.testimonials {
+    width: 1422px;
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Outfit", sans-serif;
+}
+
+#title-client {
+    width: 100%;
+    text-align: center;
+    font-size: 30px;
+    padding-top: 60px;
+    font-family: "Fraunces", serif;
+}
+
+.blocimg {
+width: 100%;
+height: 100%;
+display: flex;
+align-items: center;
+justify-content: center;
+gap: 140px;
+padding-inline: 50px;
+}
+
+.pic {
+    width: 50px;
+    height: 50px;
+    background-image: url(./images/image-jennie.jpg);
+    background-size: contain;
+    border-radius: 50px;
+}
+
+.client {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 40px;
+}
+#bold {
+    font-weight: bold;
+    font-size: large;
+    font-family: "Fraunces", serif;    
+}
+#light {
+    opacity: 50%;
+}
+
+.caroussel {
+    width: 1422px;
+    height: 60vh;
+    display: flex;
+}
+
+.img1 {
+    width: 390px;
+    height: 100%;
+    background-image: url(./images/desktop/image-gallery-milkbottles.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.img2 {
+    width: 390px;
+    height: 100%;
+    background-image: url(./images/desktop/image-gallery-sugarcubes.jpg);
+    background-size: contain;
+    background-size: cover;
+    background-position: center;
+}
+
+.img3 {
+    width: 390px;
+    height: 100%;
+    background-image: url(./images/desktop/image-gallery-cone.jpg);
+    background-size: contain;
+    background-size: cover;
+    background-position: center;
+}
+
+.img4 {
+    width: 390px;
+    height: 100%;
+    background-image: url(./images/desktop/image-gallery-orange.jpg);
+    background-size: contain;
+    background-size: cover;
+    background-position: center;
+}
+
+/* footer */
+
+footer{
+    width: 1422px;
+    height: 40vh;
+    background-color: rgb(147, 224, 214);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+.icons {
+    width: 50%;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+    padding-top: 40px;
+}
+
+@media screen and (max-width: 767px) {
+
+}
