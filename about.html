@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Kulim+Park:ital,wght@0,200;0,300;0,400;0,600;0,700;1,200;1,300;1,400;1,600;1,700&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            font-size: 100%;
+        }
+
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            width: 100vw;
+            max-width: 1600px;
+            height: 100vh;
+            background-image: url(/background/back_cv.png);
+            background-size: cover;
+            font-family: "Kulim Park", sans-serif;
+        }
+
+        .bloc_stickers {
+            width: 50%;
+            height: 10%;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            position: absolute;
+            top: 3%;
+            color: #FFFFFF;
+        }
+
+        .sticker {
+            width: 15%;
+            height: 70%;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            justify-content: center;
+            background-color: #96AC8B;
+            border-radius: 10px;
+            margin: -15%;
+            transition: all .2s ease-in-out;
+        }
+
+        .sticker:hover {
+            cursor: pointer;
+            transform: scale(1.1);
+        }
+
+        .folder {
+            position: relative;
+            z-index: 2;
+            width: 100%;
+            height: 88%;
+            margin-top: 4%;
+            background-image: url(/background/CV.svg);
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+        .link {
+            position: absolute;
+            bottom: 32px;
+            right: 530px;
+            width: 10%;
+            height: 7%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            font-size: 75%;
+            color: #5B5A5A;
+        }
+
+        #btn_back {
+            position: absolute;
+            top: 15%;
+            left: 27%;
+            width: 5%;
+            height: 9%;
+            background-image: url(/icons/btn\ back.svg);
+            background-repeat: no-repeat;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 10px;
+            transition: all .2s ease-in-out;
+        }
+
+        #btn_back:hover {
+            cursor: pointer;
+            transform: scale(1.1);
+        }
+
+         /*Style des liens pour la nav et les choix*/
+        a {
+            text-decoration: none;
+            color: #FFFFFF;
+        }
+
+        #response:hover {
+            color: #96AC8B;
+            cursor: pointer;
+        }
+          
+    </style>
+</head>
+<body>
+    <div class="container">
+
+        <!-- div menu-etiquettes -->
+        <div class="bloc_stickers">
+
+            <div id="accueil" class="sticker">
+                <a href="./page_home.html">Acceuil</a>
+            </div>
+
+            <div id="propos" class="sticker">
+                <a href="./about.html">A propos</a>
+            </div>
+
+            <div id="projets" class="sticker">
+                <a href="./projets.html">Projets</a>
+            </div>
+
+            <div id="contact" class="sticker">
+                <a href="./contact.html">Contact</a>
+            </div>
+        </div>
+
+        <div class="folder">
+            <!--Liens Git et LinekdIn-->
+            <div class="link">
+                <a href="https://github.com/ManonCeotto">manonceotto.github.io</a>
+                <a href="https://www.linkedin.com/in/manon-bousquet/">@manon-bousquet</a>
+            </div>
+
+        </div>
+        <div id="btn_back">
+            <a href="./page_home.html"></a>
+        </div>
+
+        <audio id="background-music" loop>
+            <source src="/sound/Bread Box.mp3" type="audio/mp3">
+        </audio>
+    
+        <script>
+    
+    function playMusic() {
+                var audio = document.getElementById("background-music");
+    
+                // Lancer la musique après l'interaction de l'utilisateur
+                audio.play().then(() => {
+                    console.log("Musique lancée avec succès");
+                }).catch(error => {
+                    console.error("Erreur lors du lancement de la musique :", error);
+                });
+            }
+    
+            document.addEventListener('DOMContentLoaded', function () {
+                var audio = document.getElementById('background-music');
+    
+                // Vérifier si l'audio a déjà commencé à jouer
+                if (localStorage.getItem('isPlaying') === 'true') {
+                    audio.currentTime = localStorage.getItem('currentTime') || 0;
+                    audio.play();
+                }
+    
+                // Mettre à jour le temps de lecture en temps réel
+                audio.addEventListener('timeupdate', function () {
+                    localStorage.setItem('currentTime', audio.currentTime);
+                });
+    
+                // Si la musique est en cours de lecture, enregistrer l'état
+                audio.addEventListener('play', function () {
+                    localStorage.setItem('isPlaying', 'true');
+                });
+    
+                // Si la musique est arrêtée, enregistrer l'état
+                audio.addEventListener('pause', function () {
+                    localStorage.setItem('isPlaying', 'false');
+                });
+            });
+        </script>
+</body>
+</html>

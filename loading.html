@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ellipse</title>
+    <style>
+        /*keyframe => entrée suivie de => sortie*/
+        @keyframes scale-in-center {
+            0% {
+                -webkit-transform: scale(0);
+                transform: scale(0);
+                opacity: 0;
+            }
+            100% {
+                -webkit-transform: scale(1);
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        @keyframes scale-out-center {
+            0% {
+                -webkit-transform: scale(1);
+                transform: scale(1);
+                opacity: 1;
+            }
+
+            100% {
+                -webkit-transform: scale(0);
+                transform: scale(0);
+                opacity: 1;
+            }
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            font-size: 100%;
+        }
+
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            width: 100vw;
+            max-width: 1600px;
+            height: 100vh;
+            background-image: url(/background/fond_blur.png);
+            background-size: cover;
+            background-position: center;
+            font-family: "Kulim Park", sans-serif;
+            color: #FFFFFF;
+        }
+
+        /*Horloge ellipse*/
+        svg {
+            width: 30%;
+            height: 30%;
+            margin: 20px;
+            display: inline-block;
+        /*animation horloge*/
+            animation: scale-in-center 1s ease-in-out 1s forwards, scale-out-center 1s ease-in-out 4s forwards;
+        }
+
+        h1 {
+            text-align: center;
+            color: $fontColor;
+            margin: 0 0 100px;
+            font-size: 34px;
+            font-weight: 100;
+            text-transform: uppercase;
+            background-color: darken($baseColor, 5);
+            padding: 20px 0;
+
+            b {
+                font-weight: 700;
+            }
+        }
+
+        //follow me template
+        .made-with-love {
+            margin-top: 20px;
+            padding: 10px;
+            font-size: 10px;
+            font-family: arial;
+            color: #fff;
+
+            i {
+                font-style: normal;
+                color: #fff;
+                font-size: 14px;
+                position: relative;
+                top: 2px;
+            }
+
+            a {
+                color: #fff;
+                text-decoration: none;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+        /*Horloge end*/
+    </style>
+</head>
+
+<body>
+    <div class="container">
+
+        <!-- partie ecran joueur -->
+        <div class="screen_play"></div>
+
+        <!-- Animation de l'horloge -->
+        <svg version="1.1" id="L2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+            y="0px" viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve">
+            <circle fill="none" stroke="#96AC8B" stroke-width="4" stroke-miterlimit="10" cx="50" cy="50" r="48" />
+            <line fill="none" stroke-linecap="round" stroke="#fff" stroke-width="4" stroke-miterlimit="10" x1="50"
+                y1="50" x2="85" y2="50.5">
+                <animateTransform attributeName="transform" dur="2s" type="rotate" from="0 50 50" to="360 50 50"
+                    repeatCount="indefinite" />
+            </line>
+            <line fill="none" stroke-linecap="round" stroke="#fff" stroke-width="4" stroke-miterlimit="10" x1="50"
+                y1="50" x2="49.5" y2="74">
+                <animateTransform attributeName="transform" dur="15s" type="rotate" from="0 50 50" to="360 50 50"
+                    repeatCount="indefinite" />
+            </line>
+        </svg>
+    </div>
+</body>
+
+</html>

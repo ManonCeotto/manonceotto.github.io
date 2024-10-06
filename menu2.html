@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demarrer</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Kulim+Park:ital,wght@0,200;0,300;0,400;0,600;0,700&display=swap');
+
+    body {
+        overflow-x: hidden;
+        font-size: 100%;
+        margin: 0;
+        padding: 0;
+    }
+    /*div du background et du menu*/
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+        max-width: 1600px;
+        height: 100vh;
+        background-image: url(/background/back_start.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    .bloc_menu {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        width: 60vw;
+        height: 70vh;
+        padding: 50px;
+    }
+/*////////////////////////////////////////////////////////////////////////////////////////*/
+    /*bloc ecran titre au lancement de la page*/
+    .ecran_titre {
+        width: 37vw;
+        height: 45vh;
+        background-image: url(/background/Logo\ Main.svg);
+        background-repeat: no-repeat;
+
+    /*animation pour lapparition de l'ecran titre*/
+        -webkit-animation: fade-in-fwd 3s cubic-bezier(0.390, 0.575, 0.565, 1.000) 1.3s both;
+        animation: fade-in-fwd 3s cubic-bezier(0.390, 0.575, 0.565, 1.000) 1.3s both;
+    }
+
+    .wrap_btn { /*bloc des btn*/
+        width: 40vw;
+        height: 25vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    #entry_name {
+        width: fit-content;
+        height: auto;
+        display: flex;
+        justify-content: center;
+    }
+
+        @keyframes fade-in-fwd {
+        0% {
+            -webkit-transform: translateZ(-80px);
+            transform: translateZ(-80px);
+            opacity: 0;
+        }
+
+        100% {
+            -webkit-transform: translateZ(0);
+            transform: translateZ(0);
+            opacity: 1;
+        }
+    }
+    .input-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+input[type="text"] {
+    border: none;
+    border-radius: 20px;
+    padding: 5px;
+    padding-inline: 15px;
+    width: 250px;
+    font-size: 16px;
+    margin-right: 10px;
+    background-color: #f1f1f1;
+}
+
+button {
+    border-radius: 15px;
+    border: solid 2px;
+    padding: 5px;
+    padding-inline: 15px;
+    background-color: #96ac8b93;
+    font-family: "Kulim Park", sans-serif;
+    color: white;
+    cursor: pointer;
+}
+
+button:disabled {
+    background-color: #d3d3d3;
+    cursor: not-allowed;
+}
+
+#commencer {
+    width: 250px;
+    text-align: center;
+    background-color: #b4cbb4;
+}
+        /* Animation de fondu */
+        .fade-in {
+            animation: fadeIn 1.5s forwards;
+        }
+
+    </style>
+</head>
+<!--///////////////////////////////////////////Partie HTML///////////////////////////////////////////////////////////////-->
+<body>
+    <div class="container">
+    <div class="bloc_menu">
+        <div class="ecran_titre"></div>
+        <div class="wrap_btn">
+            <div id="entry_name">
+            <input type="text" id="prenom" placeholder="Entrez votre prénom">
+                <button id="validate-prenom">ok</button>
+            </div>
+                <!-- Le bouton Commencer est désactivé par défaut -->
+                <button id="commencer" disabled>Commencer</button>
+            </div>
+            </div>
+        </div>
+    </div>
+</div>       
+
+ <!-- Musique de fond//////////////////////////////////////////////////////////////////////////////////// -->
+    <audio id="background-music" loop>
+        <source src="/sound/Bread Box.mp3" type="audio/mp3">
+    </audio>
+
+<script>
+    /* fonction sound design au click*/
+    function beep() {
+        var beep = new Audio();
+        beep.src = "sound/click_sound.wav";
+        beep.play();
+    }
+/* fonction sound design au click*/////////////////////////////////////////////////////////////////////////
+    function playMusic() {
+        var audio = document.getElementById("background-music");
+
+    // Lancer la musique après l'interaction de l'utilisateur
+    audio.play().then(() => {
+        console.log("Musique lancée avec succès");
+    }).catch(error => {
+        console.error("Erreur lors du lancement de la musique :", error);
+    });
+}
+
+const inputPrenom = document.getElementById('prenom');
+    const boutonValider = document.getElementById('validate-prenom');
+    const boutonCommencer = document.getElementById('commencer');
+
+    // Ajouter un listener pour valider le prénom
+    boutonValider.addEventListener('click', function() {
+    const prenom = inputPrenom.value.trim();
+
+    // Vérifier que le prénom n'est pas vide
+    if (prenom === "") {
+        alert("Veuillez entrer votre prénom.");
+    } else {
+        // Stocker le prénom dans le localStorage
+        localStorage.setItem("prenom", prenom);
+        boutonCommencer.disabled = false; // Activer le bouton "Commencer"
+        alert(`Prénom enregistré: ${prenom}`);
+    }
+});
+
+    // Listener pour démarrer après validation du prénom
+boutonCommencer.addEventListener('click', function() {
+const prenom = localStorage.getItem("prenom");
+    if (prenom) {
+        alert(`Bienvenue, ${prenom}! Le jeu peut commencer.`);
+        playMusic(); // Lancer la musique de fond
+        }
+    });
+</script>
+
+</body>
+
+</html>

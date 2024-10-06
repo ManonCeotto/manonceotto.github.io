@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mes Projets</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Kulim+Park:ital,wght@0,200;0,300;0,400;0,600;0,700;1,200;1,300;1,400;1,600;1,700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+        * {
+            margin: 0;
+            padding: 0;
+            font-size: 100%;
+        }
+
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100vw;
+            max-width: 1600px;
+            height: 100vh;
+            background-image: url(/background/back_projets.png);
+            font-family: "Kulim Park", sans-serif;
+            background-size: cover;
+            color: #FFFFFF;
+        }
+
+        /*bloc ecran joueur*/
+        .screen_play {
+            position: relative;
+            z-index: 2;
+            display: flex;
+            flex-direction: column;
+            background-color: #020408;
+            border-radius: 15px;
+            width: 75vw;
+            height: 75vh;
+            box-shadow: 1px 1px 12px 1px rgba(58, 58, 58, 0.53);
+        }
+
+        /*div du faux header*/
+        .contain {
+            width: 100%;
+            height: 30%;
+            display: flex;
+        }
+        .decoration {
+            background-image: url(./icons/Group\ 3.svg);
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center;
+            width: 100%;
+            height: 90%;
+            margin-left: 10%;
+        }
+
+        /* bouton quitter*/
+        .btn_close {
+            width: 10%;
+            height: 10%;
+            margin: 3%;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            font-family: "Montserrat", sans-serif;
+            font-size: 85%;
+            color: rgb(248, 249, 249);
+            border: none;
+        }
+
+        .btn_close:hover {
+            cursor: pointer;
+        }
+
+        .bloc_projets {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+
+        #projet {
+            width: 30%;
+            height: 80%;
+            background-color: #31313179;
+            border: 1px solid rgba(105, 105, 105, 0.818);
+            border-radius: 5px;
+            transition: all .2s ease-in-out;
+        }
+
+        #projet:hover {
+            cursor: pointer;
+            transform: scale(1.1);
+        }
+
+        .contenu_proj {
+            width: 100%;
+            height: 15%;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+        }
+
+        .btn_open {
+            width: 25%;
+            height: 55%;
+            background-color: #569A4B;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 5px;
+        }
+
+        /* Div du menu etiquettes*/
+        .bloc_stickers {
+            width: 60%;
+            height: 10%;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            position: absolute;
+            top: 5%;
+
+        }
+
+        /*btn catégorie du menu*/
+        .sticker {
+            width: 15%;
+            height: 70%;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            justify-content: center;
+            background-color: #96AC8B;
+            border-radius: 10px;
+            margin: -15%;
+            transition: all .2s ease-in-out;
+        }
+
+        .sticker:hover {
+            cursor: pointer;
+            transform: scale(1.1);
+        }
+
+        /*css des liens pour le menu et les choix*/
+        a {
+            text-decoration: none;
+            color: #FFFFFF;
+        }
+
+        #response:hover {
+            color: #96AC8B;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="container">
+
+        <!-- nav menu-etiquettes -->
+        <div class="bloc_stickers">
+
+            <div id="accueil" class="sticker">
+                <a href="./page_home.html">Acceuil</a>
+            </div>
+
+            <div id="propos" class="sticker">
+                <a href="./about.html">A propos</a>
+            </div>
+
+            <div id="projets" class="sticker">
+                <a href="./about.html">Projets</a>
+            </div>
+
+            <div id="contact" class="sticker">
+                <a href="./about.html">Contact</a>
+            </div>
+
+        </div>
+        <!-- partie ecran joueur -->
+        <div class="screen_play">
+       
+            <!-- div "home Git" et btn fermer -->
+            <div class="contain">
+                <div class="decoration"></div>
+
+                <a href="./page_home.html" class="btn_close">
+                <button type="button">Quitter
+                    <img src="./icons/X.svg" alt="bouton fermé">
+                </button>
+                </a>
+            </div>
+
+            <!-- div bloc des projets -->
+             <div class="bloc_projets">
+                <div id="projet">
+                    <div class="contenu_proj">
+                        <div class="text">Projet A</div>
+                        <div class="btn_open">Ouvrir</div>
+                    </div>
+                </div>
+
+                <div id="projet">
+                    <div class="contenu_proj">
+                        <div class="text">Projet B</div>
+                        <div class="btn_open">Ouvrir</div>
+                    </div>
+                </div>
+                <div id="projet">
+                    <div class="contenu_proj">
+                        <div class="text">Projet C</div>
+                        <div class="btn_open">Ouvrir</div>
+                    </div>
+                </div>
+
+             </div>
+
+
+
+
+        </div>
+
+    </div>
+
+    <audio id="background-music" loop>
+        <source src="/sound/Bread Box.mp3" type="audio/mp3">
+    </audio>
+
+    <script>
+
+function playMusic() {
+            var audio = document.getElementById("background-music");
+
+            // Lancer la musique après l'interaction de l'utilisateur
+            audio.play().then(() => {
+                console.log("Musique lancée avec succès");
+            }).catch(error => {
+                console.error("Erreur lors du lancement de la musique :", error);
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', function () {
+            var audio = document.getElementById('background-music');
+
+            // Vérifier si l'audio a déjà commencé à jouer
+            if (localStorage.getItem('isPlaying') === 'true') {
+                audio.currentTime = localStorage.getItem('currentTime') || 0;
+                audio.play();
+            }
+
+            // Mettre à jour le temps de lecture en temps réel
+            audio.addEventListener('timeupdate', function () {
+                localStorage.setItem('currentTime', audio.currentTime);
+            });
+
+            // Si la musique est en cours de lecture, enregistrer l'état
+            audio.addEventListener('play', function () {
+                localStorage.setItem('isPlaying', 'true');
+            });
+
+            // Si la musique est arrêtée, enregistrer l'état
+            audio.addEventListener('pause', function () {
+                localStorage.setItem('isPlaying', 'false');
+            });
+        });
+    </script>
+</body>
+</html>
